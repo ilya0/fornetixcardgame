@@ -28,5 +28,16 @@ From lowest to highest they consist of; four consecutive pairs, quads (four card
 An automatic win occurs if a player has 6 pairs, holds all 2's, or has a 13 card run.
  
 
-
-Steps to play game
+## Logic Programming steps
+1. init vars
+2. shuffle deck
+3. deal cards to hands
+4. pick begining person
+	- person that last won goes first
+	- if it is a first game, person with lowest card goes
+5. ask which cards to play first person
+6. ask second person
+7. evaluate cards
+    - check to see if the trend is being followed
+	- give error if it is not
+8. need to write more psudo code after I program this
