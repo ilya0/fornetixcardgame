@@ -20,16 +20,12 @@ var deck = ["2h","ah","kh","qh","jh","10h","9h","8h","7h","6h","5h","4h","3h",
 //             "2d","ad","kd","qd","jd","10d","9d","8d","7d","6d","5d","4d","3d",
 //             "2c","ac","kc","qc","jc","10c","9c","8c","7c","6c","5c","4c","3c",
 //             "2s","as","ks","qs","js","10s","9s","8s","7s","6s","5s","4s","3s",
-
 // ];
 var playdeck = [];
-
 // player hands
 var p1hand = [];
 var p2hand = [];
-
 // need to create a repository of in game cards
-
 var p1action = [];
 var p2action = [];
 
@@ -70,85 +66,111 @@ var begingame = function(){
 
 
 
-// steps to run the game
-// init vars
-// shuffle deck
-// deal cards to hands
-// pick begining person
-// ask which cards to play first person
-// ask second person
-// evaluate cards
+    // steps to run the game
+    // init vars
+    // shuffle deck
+    // deal cards to hands
+    // pick begining person
+    // ask which cards to play first person
+    // ask second person
+    // evaluate cards
     // check to see if the trend is being followed
 
 
 
 
-    function shuffle(deck) {
-        //Fisher yates shuffle
-        var i = deck.length;
-        if (i == 0) return;
-        while (--i) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var tempi = deck[i];
-            var tempj = deck[j];
-            deck[i] = tempj;
-            deck[j] = tempi;
-        }
-    }
+  function shuffle(deck) {
+      //Fisher yates shuffle
+      var i = deck.length;
+      if (i == 0) return;
+      while (--i) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tempi = deck[i];
+          var tempj = deck[j];
+          deck[i] = tempj;
+          deck[j] = tempi;
+      }
+  }
 
 
-function deal(deck,amount,player){
-// deal the deck to the player alloted, function needs specs to deal
+  function deal(deck,amount,player){
+  // deal the deck to the player alloted, function needs specs to deal
 
-  if (player === "player1"){
+    if (player === "player1"){
 
-    for(i = 0; i<amount; i++){
-      p1hand.push(deck[0])
-      deck.shift()
-    }
-
-    } else {
       for(i = 0; i<amount; i++){
-      p2hand.push(deck[0])
-      deck.shift()
+        p1hand.push(deck[0])
+        deck.shift()
+      }
 
+      } else {
+        for(i = 0; i<amount; i++){
+        p2hand.push(deck[0])
+        deck.shift()
+
+      }
     }
   }
-}
 
 
-function playercheck(){
-  // checks for the player who goes first
-  // first checks for last person won, if none goes to check hands
-  // takes p1hand and p2hand and find the lowest card in the hands
-  // finds the lowest card
+  function playercheck(){
+    // checks for the player who goes first
+    // first checks for last person won, if none goes to check hands
+    // takes p1hand and p2hand and find the lowest card in the hands
+    // finds the lowest card
 
-  if(lastgamewinner = "none"){
-    var p1hi
-    var p2hi
+    if(lastgamewinner = "none"){
+      var p1hi = 0;
+      var p2hi = 0;
 
-    // p1
-    // take the individual cards
-    // seperate them from their value
-    // save the value
+      // p1
+      // take the individual cards
+      // seperate them from their value
+      // save the value
+      for(i=0; i<p1hand.length(); i++){
+        var cutstring = p1hand[i].slice(2,p1hand[i].length);
+
+          if(p1hi < cutstring){
+            p1hi = cutstring;
+          } else {
+
+          }
+
+      }
+
+
+      for(i=0; i<p2hand.length(); i++){
+
+        var cutstring2 = p2hand[i].slice(2,p2hand[i].length);
+
+          if(p2hi < cutstring2){
+            p2hi = cutstring2;
+          } else {
+          }
+      }
+
+  // test for winner
+
+      //do the same for the p2
+
+      // take the biggest card
+      // set lastgamewinner to that card
+      // return lastgamewinner
+
+      //return last player won
+    if( p1hi > p2hi){
+      lastgamewinner = "player1";
+    }else{
+      lastgamewinner = "player2";
+    }
+
+
+    }
 
 
 
 
 
-
-    //do the same for the p2
-
-    // take the biggest card
-    // set lastgamewinner to that card
-    // return lastgamewinner
-
-  }else{
-    //return last player won
-    return lastgamewinner;
-  }
-
-}
 
 
 
