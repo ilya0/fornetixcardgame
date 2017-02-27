@@ -114,6 +114,10 @@ function deal(deck,amount,player){
   }
 }
 
+function playercheck(){
+  //takes p1hand and p2hand and find the lowest card in the hands
+// finds the lowest card
+}
 
 
 
