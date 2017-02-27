@@ -96,5 +96,25 @@ var begingame = function(){
     }
 
 
+function deal(deck,amount,player){
+
+  if (player === "player1"){
+
+    for(i = 0; i<amount; i++){
+      p1hand.push(deck[0])
+      deck.shift()
+    }
+
+    } else {
+      for(i = 0; i<amount; i++){
+      p2hand.push(deck[0])
+      deck.shift()
+
+    }
+  }
+}
+
+
+
 
 
