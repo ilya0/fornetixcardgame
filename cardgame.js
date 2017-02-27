@@ -147,8 +147,6 @@ var begingame = function(){
           } else {
           }
       }
-
-
       // test for winner
       // take the biggest card
       // set lastgamewinner to that card
