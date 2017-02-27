@@ -27,3 +27,6 @@ From lowest to highest they consist of; four consecutive pairs, quads (four card
  
 An automatic win occurs if a player has 6 pairs, holds all 2's, or has a 13 card run.
  
+
+
+Steps to play game
