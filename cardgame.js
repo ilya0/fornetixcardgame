@@ -1,7 +1,7 @@
 
 var wincounter = [{p1win:0},
                   {p1win:0}];
-var lastgamewinner;
+var lastgamewinner = "none";
 
 // need to create a temp repository of total card stack
 var resetdeck = ["2h52","ah51","kh50","qh49","jh48","10h47","9h46","8h45","7h44","6h43","5h42","4h41","3h40",
@@ -48,7 +48,8 @@ var begingame = function(){
   //The person who holds the lowest card will begin the inaugural game.
   // need to find the lowest car in both hands
   // need to add a counter for the cardgames played and create a var to hold the last person played
-}
+};
+
 //The winner of the previous game will begin the following game.
 
 
@@ -97,6 +98,7 @@ var begingame = function(){
 
 
 function deal(deck,amount,player){
+// deal the deck to the player alloted, function needs specs to deal
 
   if (player === "player1"){
 
@@ -114,10 +116,41 @@ function deal(deck,amount,player){
   }
 }
 
+
 function playercheck(){
-  //takes p1hand and p2hand and find the lowest card in the hands
-// finds the lowest card
+  // checks for the player who goes first
+  // first checks for last person won, if none goes to check hands
+  // takes p1hand and p2hand and find the lowest card in the hands
+  // finds the lowest card
+
+  if(lastgamewinner = "none"){
+    var p1hi
+    var p2hi
+
+    // p1
+    // take the individual cards
+    // seperate them from their value
+    // save the value
+
+
+
+
+
+
+    //do the same for the p2
+
+    // take the biggest card
+    // set lastgamewinner to that card
+    // return lastgamewinner
+
+  }else{
+    //return last player won
+    return lastgamewinner;
+  }
+
 }
+
+
 
 
 
