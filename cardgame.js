@@ -179,7 +179,19 @@ var begingame = function(){
   }
 
 
+// evaluation logic
+// h>d>c>s
+
+//Rules
+//The ranking of the cards from highest to lowest are: 2 A K Q J 10 9 8 7 6 5 4 3.
+//The cards are also ranked based on their suits.
+//The ranking from highest to lowest are: Hearts, Diamonds, Clubs, Spades.
+
+
+
+
 // playing game
+
 // Valid card plays are; Singles, Pairs (two cards of same value), Trips (3 cards of same value), Runs (3-12 consecutive cards), Chops, and Bombs.
 // Players must follow the trend of play i.e. if a pair is played the subsequent player(s) may not play trips; they must play a higher pair.
 // If a player plays a 3 card run the subsequent player must play a higher 3 card run. They may not play a 4 card run.
