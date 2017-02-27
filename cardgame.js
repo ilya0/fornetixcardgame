@@ -17,6 +17,13 @@ var wincounter = [{p1win:0},
                   {p1win:0}];
 var lastgamewinner = "none";
 
+//Rules
+//The ranking of the cards from highest to lowest are: 2 A K Q J 10 9 8 7 6 5 4 3.
+//The cards are also ranked based on their suits.
+//The ranking from highest to lowest are: Hearts, Diamonds, Clubs, Spades.
+
+
+
 // need to create a temp repository of total card stack
 var resetdeck = ["2h52","ah51","kh50","qh49","jh48","10h47","9h46","8h45","7h44","6h43","5h42","4h41","3h40",
             "2d39","ad38","kd37","qd36","jd35","10d34","9d33","8d32","7d31","6d30","5d29","4d28","3d27",
@@ -46,18 +53,11 @@ var p2action = [];
 // rating of how the cards play against each other
 
 
-//Rules
-//The ranking of the cards from highest to lowest are: 2 A K Q J 10 9 8 7 6 5 4 3.
-//The cards are also ranked based on their suits.
-//The ranking from highest to lowest are: Hearts, Diamonds, Clubs, Spades.
 
 
 // starting game
 
 var begingame = function(){
-  //The person who holds the lowest card will begin the inaugural game.
-  // need to find the lowest car in both hands
-  // need to add a counter for the cardgames played and create a var to hold the last person played
 };
 
 //The winner of the previous game will begin the following game.
@@ -125,27 +125,31 @@ var begingame = function(){
       var p2hi = 0;
 
       // p1
-      for(i=0; i < p1hand.length(); i++){
+       var arraylength = p1hand.length
+      for(i=0; i < arraylength; i++){
         // take the individual cards
         // seperate them from their value
         // save the highest value
-        var cutstring = p1hand[i].slice(2,p1hand[i].length);
+
+        var cutstring = p1hand[i].slice(2,arraylength);
+
           if(p1hi < cutstring){
             p1hi = cutstring;
-          } else {
-          }
+            } else {
+            }
       }
 
-
-      for(i=0; i < p2hand.length(); i++){
+        arraylength = p2hand.length
+      for(i=0; i < arraylength; i++){
         // take the individual cards
         // seperate them from their value
         // save the highest value
-        var cutstring2 = p2hand[i].slice(2,p2hand[i].length);
+        var cutstring2 = p2hand[i].slice(2,arraylength);
           if(p2hi < cutstring2){
             p2hi = cutstring2;
           } else {
           }
+
       }
       // test for winner
       // take the biggest card
@@ -160,7 +164,9 @@ var begingame = function(){
     }
     return lastgamewinner;
 
-    }
+
+  }
+}
 
 
 
