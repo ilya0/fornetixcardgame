@@ -1,13 +1,28 @@
 
 var wincounter = [{p1win:0},
                   {p1win:0}];
+var lastgamewinner;
 
 // need to create a temp repository of total card stack
-var fullcardstack = ["2h","ah","kh","qh","jh","10h","9h","8h","7h","6h","5h","4h","3h",
-                      "2d","ad","kd","qd","jd","10d","9d","8d","7d","6d","5d","4d","3d",
-                      "2s","as","ks","qs","js","10s","9s","8s","7s","6s","5s","4s","3s",
-                      "2c","ac","kc","qc","jc","10c","9c","8c","7c","6c","5c","4c","3c",
+var resetdeck = ["2h52","ah51","kh50","qh49","jh48","10h47","9h46","8h45","7h44","6h43","5h42","4h41","3h40",
+            "2d39","ad38","kd37","qd36","jd35","10d34","9d33","8d32","7d31","6d30","5d29","4d28","3d27",
+            "2c26","ac25","kc24","qc23","jc22","10c21","9c20","8c19","7c18","6c17","5c16","4c15","3c14",
+            "2s13","as12","ks11","qs10","js9","10s8","9s7","8s6","7s5","6s4","5s3","4s2","3s1",
+
 ];
+var deck = ["2h","ah","kh","qh","jh","10h","9h","8h","7h","6h","5h","4h","3h",
+            "2d","ad","kd","qd","jd","10d","9d","8d","7d","6d","5d","4d","3d",
+            "2c","ac","kc","qc","jc","10c","9c","8c","7c","6c","5c","4c","3c",
+            "2s","as","ks","qs","js","10s","9s","8s","7s","6s","5s","4s","3s",
+
+];
+// var deck = ["2h","ah","kh","qh","jh","10h","9h","8h","7h","6h","5h","4h","3h",
+//             "2d","ad","kd","qd","jd","10d","9d","8d","7d","6d","5d","4d","3d",
+//             "2c","ac","kc","qc","jc","10c","9c","8c","7c","6c","5c","4c","3c",
+//             "2s","as","ks","qs","js","10s","9s","8s","7s","6s","5s","4s","3s",
+
+// ];
+var playdeck = [];
 
 // player hands
 var p1hand = [];
@@ -28,8 +43,9 @@ var p2action = [];
 
 
 // starting game
-//The person who holds the lowest card will begin the inaugural game.
+
 var begingame = function(){
+  //The person who holds the lowest card will begin the inaugural game.
   // need to find the lowest car in both hands
   // need to add a counter for the cardgames played and create a var to hold the last person played
 }
@@ -53,6 +69,30 @@ var begingame = function(){
 
 
 
+// steps to run the game
+// init vars
+// shuffle deck
+// deal cards to hands
+// pick begining person
+// ask which cards to play first person
+// ask second person
+// evaluate cards
+    // check to see if the trend is being followed
 
+
+
+
+    function shuffle(deck) {
+        //Fisher yates shuffle
+        var i = deck.length;
+        if (i == 0) return;
+        while (--i) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tempi = deck[i];
+            var tempj = deck[j];
+            deck[i] = tempj;
+            deck[j] = tempi;
+        }
+    }
 
 
