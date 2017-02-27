@@ -1,9 +1,15 @@
-# fornetixcardgame
+# Card Game
+
+### Objective
 The objective of the game is to be the first player to get rid of all 13 cards by playing various combinations.
+ 
  
 A game involves at least two players but no more than four.
 Assume all players will play on the same screen.
 You may use whichever language you'd like however, JavaScript is preferred.
+ 
+ 
+### Game Rules
  
 The ranking of the cards from highest to lowest are: 2 A K Q J 10 9 8 7 6 5 4 3.  
 The cards are also ranked based on their suits. 
@@ -29,15 +35,43 @@ An automatic win occurs if a player has 6 pairs, holds all 2's, or has a 13 card
  
 
 ## Logic Programming steps
-1. init vars
+1. Initials vars
+	- player hands
+	- player action hands
+	- set deck
+
 2. shuffle deck
 3. deal cards to hands
 4. pick begining person
-	- person that last won goes first
-	- if it is a first game, person with lowest card goes
+	- Check for last won, person that last won goes first
+	- If it is a first game, person with lowest card goes first
 5. ask which cards to play first person
 6. ask second person
 7. evaluate cards
     - check to see if the trend is being followed
 	- give error if it is not
-8. need to write more psudo code after I program this
+8. More logic needed after this step
+
+
+## Frontend design idea
+Javascript cards library already exists for graphivs
+https://github.com/einaregilsson/cards.js
+
+Potential use for this graphics fronend while designing the backend
+
+## Issues that need to be worked on
+- Frontend integration
+- Game logic for card plays
+- Win logic
+
+
+## Further Previous references for games
+
+I created a game using the card methodology and HTML  Here: 
+
+![](https://github.com/ilya0/Project1/blob/master/readme%20files/Main%20setup%20front%20page.png)
+
+Link to [game](http://ilya0.github.io/Project1)
+
+Link to [Trello](https://trello.com/b/0pPnXkD1/project1-pvp)
+

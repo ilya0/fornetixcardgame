@@ -1,3 +1,17 @@
+//game creation steps
+
+    // steps to run the game
+    // init vars
+    // shuffle deck
+    // deal cards to hands
+    // pick begining person
+    // ask which cards to play first person
+    // ask second person
+    // evaluate cards
+    // check to see if the trend is being followed
+    //more logic is needed
+
+
 
 var wincounter = [{p1win:0},
                   {p1win:0}];
@@ -66,16 +80,6 @@ var begingame = function(){
 
 
 
-    // steps to run the game
-    // init vars
-    // shuffle deck
-    // deal cards to hands
-    // pick begining person
-    // ask which cards to play first person
-    // ask second person
-    // evaluate cards
-    // check to see if the trend is being followed
-
 
 
 
@@ -115,44 +119,37 @@ var begingame = function(){
 
   function playercheck(){
     // checks for the player who goes first
-    // first checks for last person won, if none goes to check hands
-    // takes p1hand and p2hand and find the lowest card in the hands
-    // finds the lowest card
-
     if(lastgamewinner = "none"){
+    // first checks for last person won, if none goes to check hands
       var p1hi = 0;
       var p2hi = 0;
 
       // p1
-      // take the individual cards
-      // seperate them from their value
-      // save the value
-      for(i=0; i<p1hand.length(); i++){
+      for(i=0; i < p1hand.length(); i++){
+        // take the individual cards
+        // seperate them from their value
+        // save the highest value
         var cutstring = p1hand[i].slice(2,p1hand[i].length);
-
           if(p1hi < cutstring){
             p1hi = cutstring;
           } else {
-
           }
-
       }
 
 
-      for(i=0; i<p2hand.length(); i++){
-
+      for(i=0; i < p2hand.length(); i++){
+        // take the individual cards
+        // seperate them from their value
+        // save the highest value
         var cutstring2 = p2hand[i].slice(2,p2hand[i].length);
-
           if(p2hi < cutstring2){
             p2hi = cutstring2;
           } else {
           }
       }
 
-  // test for winner
 
-      //do the same for the p2
-
+      // test for winner
       // take the biggest card
       // set lastgamewinner to that card
       // return lastgamewinner
@@ -163,7 +160,7 @@ var begingame = function(){
     }else{
       lastgamewinner = "player2";
     }
-
+    return lastgamewinner;
 
     }
 
