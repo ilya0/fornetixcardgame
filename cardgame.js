@@ -54,8 +54,6 @@ var p2action = [];
 // rating of how the cards play against each other
 
 
-
-
 // starting game
 
 var begingame = function(){
